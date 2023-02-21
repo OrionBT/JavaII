@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Login_Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="436.0" prefWidth="634.0">
+            <children>
+                <TextField fx:id="usernameTxtBox" layoutX="243.0" layoutY="178.0" />
+                <Text fx:id="usernameTxt" layoutX="131.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                <Text fx:id="passwordTxt" layoutX="133.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                <Button fx:id="resetBtn" layoutX="356.0" layoutY="298.0" mnemonicParsing="false" onAction="#onActionResetFields" prefHeight="25.0" prefWidth="149.0" text="Reset" />
+                <Button fx:id="loginBtn" layoutX="174.0" layoutY="298.0" mnemonicParsing="false" onAction="#onActionLogin" prefHeight="25.0" prefWidth="149.0" text="Login" />
+                <Text fx:id="loginTxt" layoutX="306.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
+            <PasswordField fx:id="passwordTxtBox" layoutX="243.0" layoutY="235.0" prefHeight="25.0" prefWidth="149.0" />
+            <Text fx:id="timeZoneTxt" layoutX="312.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

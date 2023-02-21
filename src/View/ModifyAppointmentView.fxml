@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="906.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyAppointmentController">
+   <children>
+      <Text fx:id="modifyAppointmentTitleTxt" layoutX="440.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Appointment">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <TextField fx:id="appointmentIDTxtField" editable="false" layoutX="142.0" layoutY="117.0" />
+      <Text fx:id="appointmentIDTxt" layoutX="43.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment ID" />
+      <TextField fx:id="titleTxtField" layoutX="142.0" layoutY="177.0" prefHeight="25.0" prefWidth="239.0" />
+      <Text fx:id="titleTxt" layoutX="74.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" />
+      <TextArea fx:id="descriptionTxtArea" layoutX="142.0" layoutY="239.0" prefHeight="156.0" prefWidth="239.0" />
+      <Text fx:id="descriptionTxt" layoutX="63.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+      <TextField fx:id="locationTxtField" layoutX="142.0" layoutY="441.0" prefHeight="25.0" prefWidth="239.0" />
+      <Text fx:id="locationTxt" layoutX="74.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" />
+      <TextField fx:id="typeTxtFIeld" layoutX="142.0" layoutY="548.0" prefHeight="25.0" prefWidth="239.0" />
+      <Text fx:id="typeTxt" layoutX="74.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+      <ComboBox fx:id="contactComboBox" layoutX="142.0" layoutY="493.0" prefHeight="25.0" prefWidth="239.0" />
+      <Text fx:id="contactTxt" layoutX="72.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" />
+      <ComboBox fx:id="customerCombox" layoutX="733.0" layoutY="493.0" prefWidth="150.0" />
+      <Text fx:id="customerTxt" layoutX="635.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer" />
+      <DatePicker fx:id="datePicker" layoutX="149.0" layoutY="589.0" />
+      <Text fx:id="startTimeLabel" layoutX="234.0" layoutY="657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="endTimeLabel" layoutX="791.0" layoutY="657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Slider fx:id="startHourSlider" blockIncrement="2.0" layoutX="72.0" layoutY="668.0" majorTickUnit="1.0" max="23.0" minorTickCount="1" onMouseDragged="#onDragStartHour" prefHeight="38.0" prefWidth="425.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="23.0" />
+      <Slider fx:id="startMinSlider" blockIncrement="0.0" layoutX="72.0" layoutY="720.0" majorTickUnit="5.0" max="59.0" minorTickCount="1" onMouseDragged="#onDragStartMin" prefHeight="24.0" prefWidth="425.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="endHourSlider" blockIncrement="2.0" layoutX="619.0" layoutY="668.0" majorTickUnit="1.0" max="23.0" minorTickCount="1" onMouseDragged="#onDragEndHour" prefHeight="38.0" prefWidth="425.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="23.0" />
+      <Slider fx:id="endMinSlider" blockIncrement="0.0" layoutX="619.0" layoutY="720.0" majorTickUnit="5.0" max="59.0" minorTickCount="1" onMouseDragged="#onDragEndMin" prefHeight="24.0" prefWidth="425.0" showTickLabels="true" showTickMarks="true" />
+      <Text fx:id="startHourTxt" layoutX="14.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour" />
+      <Text fx:id="startMinTxt" layoutX="8.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minute" />
+      <Text fx:id="endHourTxt" layoutX="569.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour" />
+      <Text fx:id="endMinTxt" layoutX="563.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minute" />
+      <Text fx:id="startTimeTxt" layoutX="238.0" layoutY="797.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="endTimeTxt" layoutX="808.0" layoutY="796.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ListView fx:id="appointmentList" layoutX="506.0" layoutY="160.0" onMouseClicked="#onSelectAppointment" prefHeight="222.0" prefWidth="552.0" />
+      <Button fx:id="deleteBtn" layoutX="735.0" layoutY="416.0" mnemonicParsing="false" onAction="#onActionDelete" text="Delete Appointment" />
+      <Button fx:id="saveBtn" layoutX="236.0" layoutY="840.0" mnemonicParsing="false" onAction="#onActionSave" prefHeight="25.0" prefWidth="85.0" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="789.0" layoutY="840.0" mnemonicParsing="false" onAction="#onActionCancel" prefHeight="25.0" prefWidth="85.0" text="Cancel" />
+      <Text fx:id="dateLabel" layoutX="76.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+      <Text fx:id="startTimeZoneLabel" layoutX="331.0" layoutY="794.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="endTimeZoneLabel" layoutX="883.0" layoutY="793.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <ComboBox fx:id="userComboBox" layoutX="733.0" layoutY="556.0" prefWidth="150.0" />
+      <Text layoutX="649.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User" />
+   </children>
+</AnchorPane>
